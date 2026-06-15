@@ -32,7 +32,7 @@
     body {
       margin: 0;
       color: var(--ink);
-      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-family: Georgia, "Times New Roman", serif;
       background:
         radial-gradient(circle at 18% 12%, rgba(183, 138, 84, 0.18), transparent 34rem),
         radial-gradient(circle at 82% 34%, rgba(69, 83, 61, 0.14), transparent 32rem),
@@ -144,7 +144,7 @@
 
     .nav-inner a {
       text-decoration: none;
-      font-family: Inter, Arial, sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 12px;
       letter-spacing: .08em;
       text-transform: uppercase;
@@ -209,7 +209,7 @@
 
     .kicker {
       margin: 0 0 22px;
-      font-family: Inter, Arial, sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(11px, 1.6vw, 13px);
       letter-spacing: .24em;
       text-transform: uppercase;
@@ -256,7 +256,7 @@
       border: 1px solid rgba(183,138,84,.35);
       border-radius: 999px;
       background: rgba(255, 250, 242, .72);
-      font-family: Inter, Arial, sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(13px, 1.8vw, 16px);
       letter-spacing: .09em;
       text-transform: uppercase;
@@ -276,7 +276,7 @@
       translate: -50% 0;
       z-index: 2;
       color: rgba(255,255,255,.82);
-      font-family: Inter, Arial, sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 11px;
       letter-spacing: .18em;
       text-transform: uppercase;
@@ -328,7 +328,7 @@
 
     .eyebrow {
       margin: 0 0 14px;
-      font-family: Inter, Arial, sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 12px;
       letter-spacing: .2em;
       text-transform: uppercase;
@@ -462,7 +462,7 @@
       display: grid;
       place-items: center;
       border: 1px solid currentColor;
-      font-family: Inter, Arial, sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 12px;
       letter-spacing: .12em;
       opacity: .8;
@@ -485,7 +485,7 @@
       display: grid;
       gap: 16px;
       margin: 22px 0 0;
-      font-family: Inter, Arial, sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     .meta-item {
@@ -526,7 +526,7 @@
       border-radius: 999px;
       background: rgba(255,250,242,.62);
       color: var(--ink);
-      font-family: Inter, Arial, sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 12px;
       letter-spacing: .1em;
       text-transform: uppercase;
@@ -560,7 +560,7 @@
       position: absolute;
       right: clamp(18px, 4vw, 42px);
       top: clamp(14px, 3vw, 30px);
-      font-family: Inter, Arial, sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(42px, 9vw, 104px);
       line-height: 1;
       letter-spacing: -.08em;
@@ -625,7 +625,7 @@
       padding: 14px 18px;
       border-radius: 999px;
       text-align: center;
-      font-family: Inter, Arial, sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 12px;
       letter-spacing: .12em;
       text-transform: uppercase;
@@ -746,7 +746,7 @@
 
     .dress-badge span:first-child {
       display: block;
-      font-family: Inter, Arial, sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 12px;
       letter-spacing: .18em;
       text-transform: uppercase;
@@ -760,6 +760,169 @@
       line-height: 1;
       font-style: italic;
       color: #fff6df;
+    }
+
+
+    .calendar-shell {
+      position: relative;
+      padding: clamp(26px, 5vw, 46px);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(145deg, rgba(255, 250, 242, .92), rgba(250, 239, 225, .76));
+      border: 1px solid rgba(183, 138, 84, .22);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .calendar-shell::before {
+      content: "";
+      position: absolute;
+      width: 340px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      right: -150px;
+      top: -170px;
+      background: radial-gradient(circle, rgba(183, 138, 84, .2), transparent 68%);
+      pointer-events: none;
+    }
+
+    .calendar-top {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin-bottom: 22px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(183, 138, 84, .18);
+      z-index: 1;
+    }
+
+    .calendar-top span {
+      display: block;
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: .9;
+      letter-spacing: -.045em;
+      color: var(--brown);
+    }
+
+    .calendar-top strong {
+      font-size: clamp(26px, 3vw, 42px);
+      line-height: 1;
+      font-weight: 500;
+      color: rgba(42, 33, 28, .68);
+    }
+
+    .calendar-weekdays,
+    .calendar-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .calendar-weekdays {
+      margin-bottom: 10px;
+    }
+
+    .calendar-weekdays span {
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(42, 33, 28, .48);
+    }
+
+    .calendar-day {
+      position: relative;
+      min-height: 76px;
+      padding: 10px 8px;
+      border-radius: 18px;
+      background: rgba(255, 252, 246, .68);
+      border: 1px solid rgba(183, 138, 84, .12);
+      display: grid;
+      align-content: start;
+      justify-items: center;
+      gap: 4px;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease), background .35s var(--ease);
+    }
+
+    .calendar-day:not(.empty):hover {
+      transform: translateY(-3px);
+      background: rgba(255, 252, 246, .96);
+      box-shadow: 0 14px 28px rgba(42, 33, 28, .08);
+    }
+
+    .calendar-day.empty {
+      opacity: .22;
+      background: transparent;
+      border-style: dashed;
+    }
+
+    .day-number {
+      font-size: clamp(20px, 2.4vw, 28px);
+      line-height: 1;
+      color: rgba(42, 33, 28, .76);
+    }
+
+    .day-label {
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      text-align: center;
+      color: rgba(42, 33, 28, .54);
+    }
+
+    .calendar-day.highlight {
+      background: linear-gradient(145deg, rgba(183, 138, 84, .92), rgba(92, 61, 41, .88));
+      border-color: rgba(255, 250, 242, .42);
+      box-shadow: 0 18px 42px rgba(92, 61, 41, .22);
+      color: #fffaf2;
+      transform: translateY(-2px);
+    }
+
+    .calendar-day.highlight::after {
+      content: "♡";
+      position: absolute;
+      right: 10px;
+      top: 8px;
+      font-size: 14px;
+      opacity: .76;
+    }
+
+    .calendar-day.highlight.party {
+      background: linear-gradient(145deg, rgba(69, 83, 61, .94), rgba(50, 38, 30, .92));
+    }
+
+    .calendar-day.highlight .day-number,
+    .calendar-day.highlight .day-label {
+      color: #fffaf2;
+    }
+
+    .calendar-note {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .calendar-note-item {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255, 252, 246, .66);
+      border: 1px solid rgba(183, 138, 84, .16);
+      color: rgba(42, 33, 28, .76);
+      line-height: 1.45;
+    }
+
+    .calendar-note-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 18px;
+      color: var(--brown);
     }
 
     .countdown-grid {
@@ -781,7 +944,7 @@
 
     .count-card strong {
       display: block;
-      font-family: Inter, Arial, sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(28px, 5vw, 54px);
       line-height: 1;
       letter-spacing: -.05em;
@@ -791,7 +954,7 @@
     .count-card span {
       display: block;
       margin-top: 10px;
-      font-family: Inter, Arial, sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 11px;
       letter-spacing: .16em;
       text-transform: uppercase;
@@ -852,7 +1015,7 @@
       border-radius: 999px;
       background: rgba(42,33,28,.9);
       color: #fffaf2;
-      font-family: Inter, Arial, sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 13px;
       transition: opacity .3s ease, transform .3s ease;
     }
@@ -927,6 +1090,7 @@
       .decor-fox { right: -22vw; top: 8vh; }
       .decor-raccoon { left: -23vw; top: 69vh; }
       .countdown-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .calendar-note { grid-template-columns: 1fr; }
       .timeline::before { left: 19px; }
       .timeline-item { grid-template-columns: 40px 1fr; gap: 14px; }
       .timeline-dot { width: 40px; height: 40px; }
@@ -941,6 +1105,10 @@
       .btn { width: 100%; }
       .countdown-grid { gap: 10px; }
       .count-card { border-radius: 18px; padding: 20px 8px; }
+      .calendar-weekdays, .calendar-grid { gap: 6px; }
+      .calendar-day { min-height: 58px; border-radius: 14px; padding: 8px 4px; }
+      .day-label { font-size: 8px; letter-spacing: .05em; }
+      .calendar-top { align-items: start; flex-direction: column; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -972,6 +1140,7 @@
       <a href="#ceremony">Церемония</a>
       <a href="#friends">Для друзей</a>
       <a href="#details">Детали</a>
+      <a href="#calendar">Календарь</a>
     </div>
   </nav>
 
@@ -1090,6 +1259,66 @@
             <h3>31 июля</h3>
             <p>Отмечаем в компании всех хороших друзей Елены и Сергея. Ну тут прям только элита приглашения получила :D</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section section-narrow" id="calendar">
+      <div class="title-row reveal">
+        <p class="eyebrow">чтобы не забыть</p>
+        <h2>Календарь июля</h2>
+        <p class="lead">Две даты, которые стоит отметить: 29 июля — церемония, 31 июля — праздник с друзьями.</p>
+      </div>
+
+      <div class="calendar-shell reveal">
+        <div class="calendar-top">
+          <span>Июль</span>
+          <strong>2026</strong>
+        </div>
+        <div class="calendar-weekdays" aria-hidden="true">
+          <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+        </div>
+        <div class="calendar-grid" aria-label="Календарь июля 2026 года">
+          <div class="calendar-day empty" aria-hidden="true"></div>
+          <div class="calendar-day empty" aria-hidden="true"></div>
+          <div class="calendar-day"><span class="day-number">1</span></div>
+          <div class="calendar-day"><span class="day-number">2</span></div>
+          <div class="calendar-day"><span class="day-number">3</span></div>
+          <div class="calendar-day"><span class="day-number">4</span></div>
+          <div class="calendar-day"><span class="day-number">5</span></div>
+          <div class="calendar-day"><span class="day-number">6</span></div>
+          <div class="calendar-day"><span class="day-number">7</span></div>
+          <div class="calendar-day"><span class="day-number">8</span></div>
+          <div class="calendar-day"><span class="day-number">9</span></div>
+          <div class="calendar-day"><span class="day-number">10</span></div>
+          <div class="calendar-day"><span class="day-number">11</span></div>
+          <div class="calendar-day"><span class="day-number">12</span></div>
+          <div class="calendar-day"><span class="day-number">13</span></div>
+          <div class="calendar-day"><span class="day-number">14</span></div>
+          <div class="calendar-day"><span class="day-number">15</span></div>
+          <div class="calendar-day"><span class="day-number">16</span></div>
+          <div class="calendar-day"><span class="day-number">17</span></div>
+          <div class="calendar-day"><span class="day-number">18</span></div>
+          <div class="calendar-day"><span class="day-number">19</span></div>
+          <div class="calendar-day"><span class="day-number">20</span></div>
+          <div class="calendar-day"><span class="day-number">21</span></div>
+          <div class="calendar-day"><span class="day-number">22</span></div>
+          <div class="calendar-day"><span class="day-number">23</span></div>
+          <div class="calendar-day"><span class="day-number">24</span></div>
+          <div class="calendar-day"><span class="day-number">25</span></div>
+          <div class="calendar-day"><span class="day-number">26</span></div>
+          <div class="calendar-day"><span class="day-number">27</span></div>
+          <div class="calendar-day"><span class="day-number">28</span></div>
+          <div class="calendar-day highlight"><span class="day-number">29</span><span class="day-label">церемония</span></div>
+          <div class="calendar-day"><span class="day-number">30</span></div>
+          <div class="calendar-day highlight party"><span class="day-number">31</span><span class="day-label">друзья</span></div>
+          <div class="calendar-day empty" aria-hidden="true"></div>
+          <div class="calendar-day empty" aria-hidden="true"></div>
+        </div>
+        <div class="calendar-note">
+          <div class="calendar-note-item"><strong>29 июля, 14:30</strong>Церемония бракосочетания на Иртышской Набережной, 9.</div>
+          <div class="calendar-note-item"><strong>31 июля, 16:00</strong>Празднование с друзьями на ул. Свободная, 161. Явка строго обязательна!</div>
         </div>
       </div>
     </section>
